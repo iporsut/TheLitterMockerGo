@@ -5,6 +5,6 @@ type AcceptingAuthorizerSpy struct {
 }
 
 func (spy *AcceptingAuthorizerSpy) Authorize(username, password string) (bool, error) {
-	AuthorizeWasCalled = true
+	spy.AuthorizeWasCalled = true
 	return true, nil
 }

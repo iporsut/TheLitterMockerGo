@@ -5,7 +5,7 @@ type AcceptingAuthorizerVerificationMock struct {
 }
 
 func (mock *AcceptingAuthorizerVerificationMock) Authorize(username, password string) (bool, error) {
-	AuthorizeWasCalled = true
+	mock.AuthorizeWasCalled = true
 	return true, nil
 }
 

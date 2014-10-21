@@ -6,7 +6,7 @@ import (
 )
 
 func TestNewlyCreatedSystemHasNoLoggedInUsers(t *testing.T) {
-	system := New(authorizer.NewDummy())
+	system := &System{&authorizer.DummyAuthorizer{}}
 
 	loginCount := system.LoginCount()
 	expectedLoginCount := 0
